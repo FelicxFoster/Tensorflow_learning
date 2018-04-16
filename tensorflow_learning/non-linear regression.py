@@ -31,6 +31,7 @@ loss = tf.reduce_mean(tf.square(y-prediction))      #就是求均方误差
 #使用梯度下降法训练
 train_step = tf.train.GradientDescentOptimizer(0.1).minimize(loss)
                                                     #tf中各种优化类提供了为损失函数计算梯度的方法，其中包含比较经典的优化算法，比如GradientDescent 和Adagrad。
+                                                    #0.1的学习率
 
 with tf.Session() as sess:                          #绘画
     #变量初始化
